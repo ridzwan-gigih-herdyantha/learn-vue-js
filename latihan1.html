@@ -9,7 +9,7 @@
     <div id="app">
         <header>
             <img src="iamge/logo.png" alt="">
-            <h1>{{ name }}</h1>
+            <h1 v-once>{{ isactive ? 'Yes' : 'No' }}</h1>
             <p>
                 The Progressive Javascript Framework
             </p>
@@ -23,7 +23,8 @@
         const member = {
             // string , number , boolean, array, object
             name: 'Doremi Fasilasido',
-            pesan: 'Hello World!'
+            pesan: 'Hello World!',
+            isactive : true
         } 
         
 
