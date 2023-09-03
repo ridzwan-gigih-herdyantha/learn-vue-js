@@ -6,28 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <header>
-        <img src="iamge/logo.png" alt="">
-        <h1>What is Vue.js</h1>
-        <p>
-            The Progressive Javascript Framework
-        </p>
-    </header>
-
-    <footer id="footer">
-        <p>copyright &copy; 2023</p>
-    </footer> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <div id="app">
-        <p>{{ message }}</p>
+        <header>
+            <img src="iamge/logo.png" alt="">
+            <h1>{{ name }}</h1>
+            <p>
+                The Progressive Javascript Framework
+            </p>
+        </header>
+        <footer>
+            <p>copyright &copy;</p>
+        </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
-        var app = new Vue({
-        el: '#app', // Menentukan elemen yang akan dikelola oleh Vue
-        data: {
-            message: 'Hello, Vue!'
-        }
-    });
+        const member = {
+            // string , number , boolean, array, object
+            name: 'Doremi Fasilasido',
+            pesan: 'Hello World!'
+        } 
+        
+
+        const vm = new Vue({
+            // elemen
+            el: "#app",
+            // data
+            data: member
+        })
+
     </script>
 </body>
 </html>
